@@ -21,11 +21,12 @@ app.use(express.json());
 
 app.use(passport.initialize());
 app.use(passport.session());
-
+console.log("Backend")
 app.use('/users', require('./routes/users'));
 app.use('/sharestory', require('./routes/shareyourstory'))
 app.use('/donation', require('./routes/donation'));
 app.use('/volunteer', require('./routes/volunteer.js'));
+app.use('/sponsor', require('./routes/sponsor'));
 app.get('/', (req, res) => res.send("Hello"));
 
 module.exports = app;
